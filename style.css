@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    display: inline-block;
+    background-color: #f0f0ff;
+}
+
+
+.content {
+    padding-left: 12vw;
+    transform: scale(1.5);
+    width: 100%;
+    display: grid;
+    gap: 3rem;
+    grid-template-areas:
+        "A B C"
+        "D B E"
+        "D F E";
+}
+
+.content div:nth-child(1) {
+    grid-area: A;
+}
+
+.content div:nth-child(2) {
+    grid-area: B;
+}
+
+.content div:nth-child(3) {
+    grid-area: C;
+}
+
+.content div:nth-child(4) {
+    grid-area: D;
+}
+
+.content div:nth-child(5) {
+    display: block;
+    grid-area: E;
+}
+
+.content div:nth-child(6) {
+    display: block;
+    grid-area: F;
+}
+
+.card {
+    position: relative;
+}
+
+.card h2 {
+    position: absolute;
+    color: #4A4E69;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    border-radius: 2rem;
+    background-color: #FEEAFA;
+    padding: 0.5rem 2.4rem;
+    top: 1.6rem;
+    right: 1.6rem;
+    animation: downtop 0.8s;
+    font-family: 'Staatliches';
+    font-size: 2rem;
+}
+
+footer {
+    display: inline;
+    position: absolute;
+    margin-top: 12rem;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 28px;
+    bottom: 5vh;
+    left: 50%;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    width: 34rem;
+    height: 100vh;
+    background: #8E9AAF;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+}
+
+header p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: white;
+    padding: 2rem 1.5rem;
+}
+
+h1 {
+    height: 4.9rem;
+    width: 100%;
+    background: #CBC0D3;
+    text-align: center;
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+    padding: 0.8rem 0;
+    width: 100%;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.content div {
+    transition:0.3s
+}
+
+.content div:hover {
+    transform: scale(1.02);
+    filter: brightness(0.8);
+}
+
+footer {
+    text-align: center;
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
